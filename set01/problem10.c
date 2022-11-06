@@ -11,9 +11,9 @@ int main()
   int result=strcmp(str1,str2);
 
   if (result>0)
-    printf("First string is greater than the second string\n");
+    printf("First string %s is greater than the second string %s\n",str1,str2);
   else if (result<0)
-    printf("Second string is greater than the first string\n");
+    printf("Second string %s is greater than the first string %s\n",str2,str1);
   else 
     printf("Both strings are equal ");
 
