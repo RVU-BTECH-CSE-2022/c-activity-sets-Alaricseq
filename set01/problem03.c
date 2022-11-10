@@ -1,18 +1,26 @@
 #include <stdio.h>
-
-void main()
+int input();
+int add(int a , int b);
+void output(int a , int b , int sum);
+int main()
 {
-  int a,b;
-  printf("Enter two numbers:");
+   input();
+}
+int input()
+{
+  int a ,b;
+  printf("Enter two numbers");
   scanf("%d%d",&a,&b);
-  int res = sum1(a,b);
-  printf("Sum is %d + %d = %d",a,b,res);
-
+  add(a,b);
 }
 
-
-
-int sum1(int a, int b)
+int add(int a,int b)
 {
-  return a+b;
+  int sum=0;
+  sum=a + b;
+  output(a,b,sum);
+}
+void output(int a , int b , int sum)
+{
+  printf("The sum of out %d and %d  is %d ",a,b,sum);
 }
