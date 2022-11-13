@@ -16,7 +16,5 @@ int main(void)
   int res =largest(&a,&b,&c);
   printf("The largest number is %d",res);
   return 0;
-
-  
 }
 
