@@ -35,17 +35,13 @@ int input()
 }
 int compare(int a , int b, int c)
 {
-  int res = largest(a,b,c);
-  printf("Largest number %d",res);
-}
-int largest(int a , int b, int c)
-{
+  int largest; 
   if (a >=b && a >= c)
-    return a;
-  else if (b >=c && b >= c)
-    return b;
+    largest=a;
+  else if (b >=a && b >= c)
+    largest=b;
   else 
-    return c;
+    largest=c;
   output(a,b,c,largest);
 }
 void output(int a, int b, int c, int largest)

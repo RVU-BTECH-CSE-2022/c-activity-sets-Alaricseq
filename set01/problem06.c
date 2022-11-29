@@ -1,20 +1,44 @@
 #include <stdio.h>
-int largest(int *x , int *y , int *z )
+int input();
+void compare(int a, int b, int c, int *largest);
+void output(int a, int b, int c, int largest);
+
+int main()
 {
-  if (*x >=*y && *x >= *z)
-    printf(*x);
-  else if (*y >=*z && *y >= *z)
-    return *y;
-  else 
-    return *z;
-}
-int main(void)
-{
-  int a, b, c;
-  printf("Enter three numbers:");
-  scanf("%d%d%d",&a,&b,&c);
-  int res =largest(&a,&b,&c);
-  printf("The largest number is %d",res);
-  return 0;
+    int a, b, c, largest;
+    a = input();
+    b = input();
+    c = input();
+    compare(a, b, c,&largest);
+    output(a, b, c, largest);
+    return 0;
 }
 
+int input()
+{
+    int num;
+    printf("Enter a number: ");
+    scanf("%d", &num);
+    return num;
+}
+
+void compare(int a, int b, int c,int *largest)
+{
+    if (a > b && a > c)
+    {
+        *largest = a;
+    }
+    else if (b > a && b > c)
+    {
+        *largest = b;
+    }
+    else
+    {
+        *largest = c;
+    }
+}
+
+void output(int a, int b, int c, int largest)
+{
+    printf("The largest number is %d\n", largest);
+}
